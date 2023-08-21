@@ -1,10 +1,16 @@
 import React from 'react';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import Routers from '../routes/routes/Routers';
 
 function Layout() {
-  return (
-    <div>
-      Layout
-    </div>
+  return (<>
+    <Header/>
+    <main>
+      <Routers/>
+    </main>
+    <Footer/>
+    </>
   );
 }
 
