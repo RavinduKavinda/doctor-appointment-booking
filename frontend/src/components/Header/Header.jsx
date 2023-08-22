@@ -1,5 +1,25 @@
 import React from 'react';
 import logo from '../../assets/images/logo.png';
+import { NavLink, Link} from 'react-router-dom';
+
+const navLinks = [
+  {
+    path:'/home',
+    display: 'Home'
+  },
+  {
+    path:'/doctors',
+    display: 'Doctors'
+  },
+  {
+    path:'/services',
+    display: 'Services'
+  },
+  {
+    path:'/contact',
+    display: 'Contact Us'
+  },
+]
 
 const Header = () => {
   return (
@@ -9,7 +29,23 @@ const Header = () => {
           {/* Logo */}
           <div>
               <img src={logo} alt="logo" className="max-h-12 mt-2"/>
-          </div>   
+          </div>  
+
+          {/*menu*/}
+          <div className="navigation">
+            <ul className="menu flex items-center gap-10">
+              {navLinks.map((link,index) =>
+               <li key={index}>
+                    <NavLink to={link.path} className={navClass=> navClass.isActive ? 
+                      'text-primaryColor test-[16px] leading-7 font[600]' : 
+                      'text-textColor test-[16px] leading-7 font[500] hover:text-primaryColor'}>
+                      {link.display}
+                    </NavLink>
+                </li>)
+              }
+            </ul>
+          </div>
+          
         </div>
       </div>
     </header>  
