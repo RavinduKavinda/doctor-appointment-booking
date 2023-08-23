@@ -9,7 +9,7 @@ export default {
       purpleColor:"#8e44ad",
       irisBlueColor:"#1abc9c",
       headingColor:"#2c3e50",
-      textColor:"#7f8c8d",
+      textColor:"black",
     },
 
     boxShadow: {
