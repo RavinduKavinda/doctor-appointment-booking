@@ -48,16 +48,24 @@ const Header = () => {
           </div>
           
           {/*user proffile*/}
-          <div className="flex items-center gap-1"></div>
+          <div className="flex items-center gap-5">
 
               <div>
                 <Link to="/">
-                <figure className="w-[35px] h-[35px] rounded-full">
+                <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
                   <img src={userImg} className='w-full rounded-full mt-2' alt="avatarIcon" />
                 </figure>                
                 </Link>
               </div>
 
+              <Link to="/login">
+                <button className="bg-primaryColor text-white px-6 py-2 mt-2 font-[600] h-[44px] flex items-center justify-center rounded-[50px]">
+                  Login
+                </button>
+            </Link>
+
+            
+          </div>
 
         </div>
       </div>
