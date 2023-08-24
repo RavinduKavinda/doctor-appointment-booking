@@ -35,7 +35,7 @@
     }
 }
 
-@media only screen and (max-width: 768){
+@media only screen and (max-width: 768px){
     .heading{
         @apply text-[25px] leading-[35px];
     }
