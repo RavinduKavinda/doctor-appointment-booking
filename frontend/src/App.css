@@ -42,7 +42,7 @@ body{
         position: absolute;
         top: 0;
         left: 0;
-        background-color: aliceblue;
+        background-color: lightblue;
         z-index: 2;
         flex-direction: column;
         justify-content: center;
