@@ -1,4 +1,5 @@
 import React from 'react'
+import desImg from '../assets/images/des.jpg';
 
 const Home = () => {
   return <>
@@ -50,6 +51,11 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="flex gap-[30px] justify-end">
+          <div>
+            <img className="w-full rounded-[40%]" src={desImg} alt="" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
