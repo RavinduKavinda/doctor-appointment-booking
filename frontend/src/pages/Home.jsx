@@ -19,12 +19,39 @@ const Home = () => {
             </p>
 
             <button className="btn">Request an Appointment</button>
+          </div>
+        {/*count*/}        
+          <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
+
+            <div>
+              <h2 className="text-[35px] leading-[55px] lg:text-[40px] lg:leading-[50px] font-[700] text-headingColor">
+                30+
+              </h2>
+              <span className="w-[80px] h-2 bg-green-500 rounded-full block mt-[-16px]"></span>
+              <p className="text_para">Years of Experience</p>
+            </div>
+
+            <div>
+              <h2 className="text-[35px] leading-[55px] lg:text-[40px] lg:leading-[50px] font-[700] text-headingColor">
+                15+
+              </h2>
+              <span className="w-[50px] h-2 bg-yellow-500 rounded-full block mt-[-16px]"></span>
+              <p className="text_para">Clinic Location</p>
+            </div>
+
+            <div>
+              <h2 className="text-[35px] leading-[55px] lg:text-[40px] lg:leading-[50px] font-[700] text-headingColor">
+                95%
+              </h2>
+              <span className="w-[100px] h-2 bg-blue-500 rounded-full block mt-[-16px]"></span>
+              <p className="text_para">Patient Satisfaction</p>
+            </div>
 
           </div>
         </div>
+
       </div>
     </div>
-
   </section>
 
 
