@@ -13,7 +13,7 @@
         @apply max-w-full w-[1440px] px-5 mx-auto;
     }
     .btn{
-        @apply br-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px];
+        @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px];
     }
     .heading{
         @apply text-[44px] leading-[54px] font-[700] text-headingColor;
@@ -23,6 +23,9 @@
     }
     .header{
         @apply bg-[url('./assets/images/bgNav.png')] bg-no-repeat bg-cover bg-center w-full h-[60px] leading-[100px];
+    }
+    .description{
+        @apply bg-[url('./assets/images/bgNav.png')] bg-no-repeat bg-cover bg-center w-full ;
     }
 }
 
