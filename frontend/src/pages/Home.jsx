@@ -1,5 +1,10 @@
 import React from 'react'
 import desImg from '../assets/images/des.jpg';
+import icon01 from '../assets/images/icon01.png';
+import icon02 from '../assets/images/icon02.png';
+import icon03 from '../assets/images/icon03.jpg';
+import { Link } from 'react-router-dom';
+import { BsArrowRight } from 'react-icons/bs';
 
 const Home = () => {
   return <>
@@ -72,7 +77,63 @@ const Home = () => {
         </p>
       </div>
 
-      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
+        
+        <div className="py-[30px] px-5">
+          <div className="flex items-center justify-center">
+            <img src={icon01} alt="Find a Doc."/>
+          </div>
+          <div className="mt-[30px]">
+            <h2 className="text-center text-headingColor text-[25px] font-[700]">
+              Find a Doctor
+            </h2>
+            <p className="leading-7 text-[15px] text-textColor text-center">
+              Discover the right doctor for your healthcare needs with our user-friendly search tool.
+            </p>
+            <Link to='/doctors' className="w-[45px] h-[45px] rounded-full border border-solid border-[black]
+            mt-[30px] mx-auto flex items-center justify-center group hover:text-white hover:bg-primaryColor hover:border-none">
+              <BsArrowRight className="w-6 h-6"/>
+            </Link>
+          </div>
+        </div>
+
+        <div className="py-[30px] px-5">
+          <div className="flex items-center justify-center">
+            <img src={icon02} alt="Find a Doc."/>
+          </div>
+          <div className="mt-[30px]">
+            <h2 className="text-center text-headingColor text-[25px] font-[700]">
+              Find a Location
+            </h2>
+            <p className="leading-7 text-[15px] text-textColor text-center">
+              Locate our nearest doctor effortlessly using our convenient location finder.
+            </p>
+            <Link to='/doctors' className="w-[45px] h-[45px] rounded-full border border-solid border-[black]
+            mt-[30px] mx-auto flex items-center justify-center group hover:text-white hover:bg-primaryColor hover:border-none">
+              <BsArrowRight className="w-6 h-6"/>
+            </Link>
+          </div>
+        </div>
+
+        <div className="py-[30px] px-5">
+          <div className="flex items-center justify-center">
+            <img src={icon03} alt="Find a Doc."/>
+          </div>
+          <div className="mt-[30px]">
+            <h2 className="text-center text-headingColor text-[25px] font-[700]">
+              Book an Appointment
+            </h2>
+            <p className="leading-7 text-[15px] text-textColor text-center">
+              Ready to see the doctor? Schedule your appointment now for personalized care and expert medical attention.
+            </p>
+            <Link to='/doctors' className="w-[45px] h-[45px] rounded-full border border-solid border-[black]
+            mt-[30px] mx-auto flex items-center justify-center group hover:text-white hover:bg-primaryColor hover:border-none">
+              <BsArrowRight className="w-6 h-6"/>
+            </Link>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </section>
