@@ -60,6 +60,23 @@ const Home = () => {
     </div>
   </section>
 
+  <section>
+    <div className="container">
+      <div className="lg:w-[800px] mx-auto">
+        <h2 className="heading text-center">
+          Follow evidence-based Solutions Now, Save Lives Today, Save Money Tomorrow.
+        </h2>
+        <p className="text_para text-center">
+        Dr.OnCall allows you to connect with doctors, access medical guidance, and potentially receive a prescription, 
+        all from the convenience of your own home. You can consult a general practitioner (GP) or a specialized doctor.
+        </p>
+      </div>
+
+      
+
+    </div>
+  </section>
+
 
   </>
 }
