@@ -16,7 +16,12 @@ const ServicesCard = ({item, index}) => {
 
       <div className="flex items-center justify-between mt-7">
 
-        <span className="">
+        <span className="w-[30px] h-[30px] flex items-center justify-center leading-4 font-[700] text-[17px]"
+        style={{
+            background: `${bgColor}`,
+            color: `${textColor}`,
+            borderRadius: '50%'
+          }}>
           {index + 1}
         </span>
 
