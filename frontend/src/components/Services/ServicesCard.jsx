@@ -20,9 +20,8 @@ const ServicesCard = ({item, index}) => {
           {index + 1}
         </span>
 
-        <Link to='/doctors' className="w-[45px] h-[45px] rounded-full border border-solid border-[black]
-            mt-[30px] mx-auto flex items-center justify-center group hover:text-white hover:bg-primaryColor hover:border-none">
-              <BsArrowRight className="w-6 h-6"/>
+        <Link to='/doctors' className="w-[30px] h-[30px] rounded-full border border-solid border-[black] flex items-center justify-center group hover:text-white hover:bg-primaryColor hover:border-none mr-5">
+              <BsArrowRight className="w- h-5"/>
         </Link>
 
       </div>
