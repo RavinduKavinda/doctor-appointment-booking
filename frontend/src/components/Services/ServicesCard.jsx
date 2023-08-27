@@ -8,6 +8,9 @@ const ServicesCard = ({item, index}) => {
       <h2 className="text-[25px] leading-9 text-headingColor font-[650]">
         {name}
       </h2>
+      <p className="text-[17px] leading-6 text-textColor font-[400] mt-3">
+        {desc}
+      </p>
     </div>
   );
 };
