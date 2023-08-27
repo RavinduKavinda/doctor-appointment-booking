@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { BsArrowRight } from 'react-icons/bs';
 
 const ServicesCard = ({item, index}) => {
 
@@ -11,6 +13,19 @@ const ServicesCard = ({item, index}) => {
       <p className="text-[17px] leading-6 text-textColor font-[400] mt-3">
         {desc}
       </p>
+
+      <div className="flex items-center justify-between mt-7">
+
+        <span className="">
+          {index + 1}
+        </span>
+
+        <Link to='/doctors' className="w-[45px] h-[45px] rounded-full border border-solid border-[black]
+            mt-[30px] mx-auto flex items-center justify-center group hover:text-white hover:bg-primaryColor hover:border-none">
+              <BsArrowRight className="w-6 h-6"/>
+        </Link>
+
+      </div>
     </div>
   );
 };
