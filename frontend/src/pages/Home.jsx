@@ -141,6 +141,20 @@ const Home = () => {
 
   <About/>
 
+  {/*services*/}
+  <section>
+    <div className="container">
+      <div className="mx-auto">
+        <h2 className="heading text-center">
+          Our Services
+        </h2>
+        <p className="text_para text-center">
+          We offer a wide range of services to meet your healthcare needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
   </>
 }
 
