@@ -8,6 +8,6 @@ const ServiceList = () => {
       {services.map((item, index) => <ServicesCard item={item} index={index} key={index}/>)}  
     </div>
   );
-}
+};
 
 export default ServiceList;
