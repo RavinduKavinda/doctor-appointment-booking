@@ -190,6 +190,23 @@ const Home = () => {
       </div>
     </div>
   </section>
+
+  {/*best doctors*/}
+  <section>
+  <div className="container">
+      <div className="mx-auto">
+        <h2 className="heading text-center">
+          Our Best Doctors
+        </h2>
+        <p className="text_para text-center">
+        Our Best Doctors is a user-friendly online platform where patients can easily book appointments with top-notch medical professionals.
+        </p>
+      </div>
+
+      
+
+    </div>
+  </section>
   </>
 }
 
