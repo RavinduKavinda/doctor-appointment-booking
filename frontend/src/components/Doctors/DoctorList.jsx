@@ -1,11 +1,13 @@
 import React from 'react';
+import DoctorCard from './DoctorCard';
 
 const DoctorList = () => {
   return (
-    <div>
-      DoctorList
+    <div className=" ">
+      
     </div>
   );
 }
 
 export default DoctorList;
+ 
