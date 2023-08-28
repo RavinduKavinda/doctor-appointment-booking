@@ -164,8 +164,28 @@ const Home = () => {
   <section>
     <div className="container">
       <div className="flex items-center justify-between flex-col lg:flex-row">
-        <div className="relative z-10 xl:w-[800px] flex justify-items-start mt-5 lg:mt-0">
-          <img src={featureImg} alt=""/>
+        <div className="relative z-10 xl:w-[500px] flex justify-items-start">
+          <img src={featureImg} alt="" className="w-3/4 rounded-[20%]"/>
+        </div>
+
+        <div className="xl:w-[900px]">
+
+          <h2 className="heading">
+            Get our virtual care treatment <br /> 
+            from anywhere and anytime.
+          </h2>
+
+          <ul className="pl-4">
+            <li className="text_para">
+            1.  We are committed to providing you with the best possible care and the best possible experience.
+            </li> 
+            <li className="text_para">
+            2.  We are here to help you with your healthcare needs, and we are here to help you with your healthcare needs.
+            </li> 
+          </ul>
+          <Link>
+            <button className="btn">Learn More</button>
+          </Link>
         </div>
       </div>
     </div>
