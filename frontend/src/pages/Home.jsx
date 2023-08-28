@@ -3,6 +3,7 @@ import desImg from '../assets/images/des.jpg';
 import icon01 from '../assets/images/icon01.png';
 import icon02 from '../assets/images/icon02.png';
 import icon03 from '../assets/images/icon03.jpg';
+import featureImg from '../assets/images/feature.jpg';
 import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
 import About from '../components/About/About';
@@ -155,10 +156,20 @@ const Home = () => {
       </div>
 
       <ServiceList/>
-      
+
     </div>
   </section>
 
+  {/*feature*/}
+  <section>
+    <div className="container">
+      <div className="flex items-center justify-between flex-col lg:flex-row">
+        <div className="relative z-10 xl:w-[800px] flex justify-items-start mt-5 lg:mt-0">
+          <img src={featureImg} alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
   </>
 }
 
