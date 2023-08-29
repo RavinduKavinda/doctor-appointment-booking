@@ -141,7 +141,12 @@ const Footer = () => {
             </div>   
           </div>
         </div>
-
+        {/* copyright */}
+        <div className="text-center justify-center">
+        <p className="text-[12px] leading-6 font-[300] text-gray-500">
+              Copyright ©{year} developed by REACT all right reserved.
+        </p>
+      </div>
       </div>
     </footer>
   )
