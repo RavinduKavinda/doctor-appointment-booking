@@ -9,7 +9,8 @@ const FaqCard = ({ item }) => {
         };
 
     return (
-        <div className="p-2 lg:p-4 rounded-[12px] border-[3px] border-solid border-blue-400 ml-[20px] lg:ml-[40px] mr-[20px] lg:mr-[40px] mb-3 cursor-pointer">
+        <div className="p-2 lg:p-4 rounded-[12px] border-[3px] border-solid border-blue-400
+         ml-[20px] lg:ml-[40px] mr-[20px] lg:mr-[40px] mb-3 cursor-pointer bg-blue-50">
             <div className="flex items-center justify-between gap-6"
                 onClick={toggle}>
 

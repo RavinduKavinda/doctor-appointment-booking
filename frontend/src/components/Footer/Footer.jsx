@@ -77,7 +77,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="pb-6 pt-5">
+    <footer className="pb-6">
       <div className="container">
         <div className="flex justify-between flex-col md:flex-row flex-wrap gap-5">
           

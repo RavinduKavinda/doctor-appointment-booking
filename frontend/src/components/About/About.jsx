@@ -29,7 +29,9 @@ const About = () => {
 
                     <Link to='/'>
                         <button className="btn">
-                            Learn More
+                            <p className='hover:scale-110 transition-transform'>
+                                Learn More
+                            </p>                            
                         </button>
                     </Link>
 

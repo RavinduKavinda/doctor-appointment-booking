@@ -29,7 +29,7 @@ const Home = () => {
              the overall efficiency and accessibility of healthcare services.
             </p>
 
-            <button className="btn">Request an Appointment</button>
+            <button className="btn hover:scale-110 transition-transform">Request an Appointment</button>
           </div>
         {/*count*/}        
           <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
@@ -172,7 +172,7 @@ const Home = () => {
 
         <div className="xl:w-[900px]">
 
-          <h2 className="heading">
+          <h2 className="heading text-center md:text-left">
             Get our virtual care treatment <br /> 
             from anywhere and anytime.
           </h2>
@@ -186,7 +186,11 @@ const Home = () => {
             </li> 
           </ul>
           <Link>
-            <button className="btn">Learn More</button>
+            <button className="btn">
+              <p className='hover:scale-110 transition-transform'>
+                Learn More
+              </p>
+            </button>
           </Link>
         </div>
       </div>
