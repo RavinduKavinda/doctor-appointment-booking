@@ -48,15 +48,15 @@ const quickLinks02 = [
   },
   {
     path: "/",
-    name: "Request an Appointment",
+    display: "Request an Appointment",
   },
   {
     path: "/",
-    name: "Find a Location",
+    display: "Find a Location",
   },
   {
     path: "/",
-    name: "Get a Opinion",
+    display: "Get a Opinion",
   },
 ];
 
@@ -91,6 +91,38 @@ const Footer = () => {
                 <li key={index}>
                   <Link to={item.path} className=" font-[500] leading-7 text-[#7D7D7D] hover:text-blue-700 transition duration-300">
                     {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Needs */}
+          <div>
+            <h2 className="text-[20px] font-[700] mb-5 text-headingColor">
+              I want to:
+            </h2>
+            <ul>
+              {quickLinks02.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path} className=" font-[500] leading-7 text-[#7D7D7D] hover:text-blue-700 transition duration-300">
+                    {item.display}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h2 className="text-[20px] font-[700] mb-5 text-headingColor">
+              Support
+            </h2>
+            <ul>
+              {quickLinks03.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path} className=" font-[500] leading-7 text-[#7D7D7D] hover:text-blue-700 transition duration-300">
+                    {item.display}
                   </Link>
                 </li>
               ))}
