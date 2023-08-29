@@ -208,6 +208,11 @@ const Home = () => {
 
     </div>
   </section>
+
+  {/*faq*/}
+  <section>
+    
+  </section>
   </>
 }
 
