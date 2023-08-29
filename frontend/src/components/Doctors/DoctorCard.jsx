@@ -1,5 +1,7 @@
 import React from 'react';
 import star from '../../assets/images/star.jpg';
+import { Link } from 'react-router-dom';
+import {BsArrowRight} from 'react-icons/bs';
 
 {/*best doctors*/}
 const DoctorCard = ({doctor}) => {
@@ -37,7 +39,7 @@ const DoctorCard = ({doctor}) => {
         </div>
         
         {/*total patients*/}
-        <div className='mt-[10px] lg:mt-4 flex items-center justify-between'>
+        <div className='mt-[10px] lg:mt-2 flex items-center justify-between'>
             <div>
                 <h3 className="flex items-center text-[15px] font-bold text-textColor">
                     - {totalPatients} Patients
@@ -46,6 +48,10 @@ const DoctorCard = ({doctor}) => {
                     At {hospital}
                 </p> 
             </div>
+            <Link to='/doctors' className="w-[35px] h-[35px] rounded-full border border-solid border-[black]
+             flex items-center justify-center group hover:text-white hover:bg-primaryColor hover:border-none">
+              <BsArrowRight className="w-4 h-4"/>
+            </Link>
         </div>
     </div>
   );
