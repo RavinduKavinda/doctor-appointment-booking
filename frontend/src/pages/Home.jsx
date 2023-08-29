@@ -9,6 +9,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import About from '../components/About/About';
 import ServiceList from '../components/Services/ServiceList';
 import DoctorList from '../components/Doctors/DoctorList';
+import FaqList from '../components/Faq/FaqList';
 
 const Home = () => {
   return <>
@@ -211,7 +212,14 @@ const Home = () => {
 
   {/*faq*/}
   <section>
+    <div className="w-full">
+      <h2 className="heading text-center">
+        Frequently Asked Questions by Our Patients
+      </h2>
     
+    <FaqList/>
+
+    </div>
   </section>
   </>
 }
