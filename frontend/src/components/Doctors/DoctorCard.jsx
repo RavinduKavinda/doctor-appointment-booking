@@ -1,4 +1,5 @@
 import React from 'react';
+import star from '../../assets/images/star.jpg';
 
 
 const DoctorCard = ({doctor}) => {
@@ -22,9 +23,17 @@ const DoctorCard = ({doctor}) => {
         </h2>
 
         <div className="mt-2 lg:mt-3 flex items-center justify-between">
-                <span className="bg-[#81ecec] text-irisBlueColor py-1 px-2 lg:py-0.5 lg:px-4 text-[13px] rounded leading-3 lg:leading-5 font-bold">
-                    {specialty}
+            <span className="bg-[#81ecec] text-irisBlueColor py-1 px-2 lg:py-0.5 lg:px-4 text-[13px] rounded leading-3 lg:leading-5 font-bold">
+                {specialty}
             </span>
+            <div className="flex items-center gap-1">
+                <span className="flex items-center gap-1 text-[15px] leading-6 lg:leading-7 font-bold text-textColor">
+                    <img src={star} alt="" className='w-[25px]' /> {avgRating}
+                </span>
+                <span className="flex items-center gap-1 text-[15px] leading-6 lg:leading-7 font-bold text-headingColor">
+                    ({totalRating})
+                </span>
+            </div>   
         </div>
         
     </div>
