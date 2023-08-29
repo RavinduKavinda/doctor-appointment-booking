@@ -129,7 +129,19 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* logo */}
+          <div>           
+            <img src={logo} alt="" className="max-h-10" />
+            <div className="flex items-center gap-3 mt-4">
+              {socialMedia.map((item, index) => (
+                <Link to={Link.path} key={index} className="w-[30px] h-[30px] border border-solid rounded-[25%] flex items-center justify-center
+                group hover:bg-primaryColor">
+                  {item.icon}
+                </Link>))}
+            </div>   
+          </div>
         </div>
+
       </div>
     </footer>
   )
