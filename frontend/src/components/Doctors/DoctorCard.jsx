@@ -1,7 +1,7 @@
 import React from 'react';
 import star from '../../assets/images/star.jpg';
 
-
+{/*best doctors*/}
 const DoctorCard = ({doctor}) => {
 
     const {
@@ -36,6 +36,17 @@ const DoctorCard = ({doctor}) => {
             </div>   
         </div>
         
+        {/*total patients*/}
+        <div className='mt-[10px] lg:mt-4 flex items-center justify-between'>
+            <div>
+                <h3 className="flex items-center text-[15px] font-bold text-textColor">
+                    - {totalPatients} Patients
+                </h3>
+                <p className="text-[13px] leading-6 font-[400] text-headingColor">
+                    At {hospital}
+                </p> 
+            </div>
+        </div>
     </div>
   );
 }
