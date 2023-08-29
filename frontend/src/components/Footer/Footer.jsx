@@ -22,12 +22,84 @@ const socialMedia = [
   },
 ];
 
+const quickLinks01 = [
+  {
+    path: "/",
+    name: "Home",
+  },
+  {
+    path: "/",
+    name: "About",
+  },
+  {
+    path: "/",
+    name: "Services",
+  },
+  {
+    path: "/",
+    name: "Blog",
+  },
+];
+
+const quickLinks02 = [
+  {
+    path: "/",
+    display: "Find a Doctor",
+  },
+  {
+    path: "/",
+    name: "Request an Appointment",
+  },
+  {
+    path: "/",
+    name: "Find a Location",
+  },
+  {
+    path: "/",
+    name: "Get a Opinion",
+  },
+];
+
+const quickLinks03 = [
+  {
+    path:"/",
+    display: "Contact Us",
+  },
+  {
+    path:"/",
+    display: "Donate",
+  },
+];
+
 
 const Footer = () => {
+
+  const year = new Date().getFullYear();
+
   return (
-    <div>
-      Footer
-    </div>
+    <footer className="pb-6 pt-5">
+      <div className="container">
+        <div className="flex justify-between flex-col md:flex-row flex-wrap gap-5">
+          
+          {/* Quick Links */}
+          <div>
+            <h2 className="text-[20px] font-[700] mb-5 text-headingColor">
+              Quick Links
+            </h2>
+            <ul>
+              {quickLinks01.map((item, index) => (
+                <li key={index}>
+                  <Link to={item.path} className=" font-[500] leading-7 text-[#7D7D7D] hover:text-blue-700 transition duration-300">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
   )
 }
 
