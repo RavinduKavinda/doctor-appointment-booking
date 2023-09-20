@@ -8,8 +8,8 @@ export default {
       yellowColor:"#f1c40f",
       purpleColor:"#8e44ad",
       irisBlueColor:"#1abc9c",
-      headingColor:"#2c3e50",
-      textColor:"black",
+      headingColor:"black",
+      textColor:"#2c3e50",
     },
 
     boxShadow: {

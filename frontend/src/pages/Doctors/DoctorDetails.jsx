@@ -63,7 +63,7 @@ const DoctorDetails = () => {
             </div>
 
             {/*-----Doctor About & Feedback Details-----*/}
-            <div className="mt-[25px] m-5">
+            <div className="mt-[25px] mx-10">
               { tab === 'about' && <DoctorAbout /> }
               { tab === 'feedback' && <DoctorFeedback /> }
             </div>
