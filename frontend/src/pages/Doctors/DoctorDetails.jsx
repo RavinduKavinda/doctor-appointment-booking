@@ -16,7 +16,7 @@ const DoctorDetails = () => {
         <div className="grid md:grid-cols-3 gap-[50px]">
           {/*-----Desc-----*/}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-5 px-[30px] ">
+            <div className="flex items-center gap-5 mx-10 ">
               <figure className="max-w-[300px] max-h-[500px]">
                 <img src={doctorImg} alt="" className="w-full rounded-[10px]" />
               </figure>
@@ -44,7 +44,7 @@ const DoctorDetails = () => {
             </div>
 
             
-            <div className="mt-[50px] ml-5 border-b border-solid border-[#2d3436]">
+            <div className="mt-[50px] m-5 border-b border-solid border-[#2d3436]">
               {/*-----Doctor About-----*/}
               <button
                 onClick={() => setTab('about')}
@@ -63,7 +63,7 @@ const DoctorDetails = () => {
             </div>
 
             {/*-----Doctor About & Feedback Details-----*/}
-            <div className="mt-[25px] ml-10">
+            <div className="mt-[25px] m-5">
               { tab === 'about' && <DoctorAbout /> }
               { tab === 'feedback' && <DoctorFeedback /> }
             </div>
