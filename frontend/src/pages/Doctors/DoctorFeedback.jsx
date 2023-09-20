@@ -1,6 +1,7 @@
 import React from 'react'
 import avator from './../../assets/images/avatarIcon.png'
 import { formatDate } from '../../utils/formatDate'
+import { AiFillStar } from 'react-icons/ai'
 
 const DoctorFeedback = () => {
   return (
@@ -31,9 +32,17 @@ const DoctorFeedback = () => {
                     </div>
                 </div>
 
-                
+                {/*-----rating-----*/}
+                <div className="flex gap-1">
+                    {[...Array(5).keys()].map((_, index) => (
+                        <AiFillStar key={index} color="#0067FF" />
+                    ))}
+                </div>
+
             </div>
         </div>
+
+        
     </div>
   )
 }
