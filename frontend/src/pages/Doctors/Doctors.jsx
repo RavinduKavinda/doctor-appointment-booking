@@ -7,7 +7,7 @@ const Doctors = () => {
 <>
 
 {/*-----Search Bar-----*/}
-<section className="bg-[#f5f6fa] " >
+<section className="bg-[#abf1f1] " >
     <div className="container text-center">
       <h2 className='heading'>Find a Doctor</h2>
       <div className="max-w-[570px] mt-[30px] mx-auto bg-[#596275] rounded-md flex items-center justify-between">
@@ -27,7 +27,7 @@ const Doctors = () => {
 {/*-----Doctors List-----*/}
 <section>
   <div className="cotainer">
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 pl-5 pr-5">
         {doctors.map((doctor)=> 
           <DoctorCard key={doctor.id} doctor={doctor}/>      
         )}
