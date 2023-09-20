@@ -7,11 +7,11 @@ const DoctorDetails = () => {
 
   /*-----Doctor Details-----*/
     <section>
-      <div className="max-w-[1170px] px-5 mx=auto">
+      <div className="px-[50px]  mx=auto">
         <div className="grid md:grid-cols-3 gap-[50px]">
           {/*-----Desc-----*/}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 ">
               <figure className="max-w-[300px] max-h-[500px]">
                 <img src={doctorImg} alt="" className="w-full rounded-[10px]" />
               </figure>
@@ -37,12 +37,19 @@ const DoctorDetails = () => {
                 </p>
               </div>
             </div>
+
+            {/*-----Doctor About-----*/}
+            <div className="mt-[50px] border-b border-solid border-[#2d3436]">
+              <button className={`py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
+                About
+              </button>
+              <button className={`py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
+                Feedback
+              </button>
+            </div>
+
           </div>
-
-          <div className="">
-
-          </div>
-
+          
         </div>
       </div>
     </section>
