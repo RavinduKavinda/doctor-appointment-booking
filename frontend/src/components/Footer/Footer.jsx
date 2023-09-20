@@ -77,9 +77,9 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="pb-6">
+    <footer className="pb-6 bg-slate-100">
       <div className="container">
-        <div className="flex justify-between flex-col md:flex-row flex-wrap gap-5">
+        <div className="flex justify-between flex-col md:flex-row flex-wrap gap-5 pt-10">
           
           {/* Quick Links */}
           <div>
