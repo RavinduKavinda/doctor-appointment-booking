@@ -30,7 +30,7 @@ const DoctorCard = ({doctor}) => {
             </span>
             <div className="flex items-center gap-1">
                 <span className="flex items-center gap-1 text-[15px] leading-6 lg:leading-7 font-bold text-textColor">
-                    <img src={star} alt="" className='w-[25px]' /> {avgRating}
+                    <img src={star} alt="" className='w-[15px]' /> {avgRating}
                 </span>
                 <span className="flex items-center gap-1 text-[15px] leading-6 lg:leading-7 font-bold text-headingColor">
                     ({totalRating})
