@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import doctorImg from '../../assets/images/doctorImg01.jpg'
 import starIcon from '../../assets/images/star.jpg'
+import DoctorAbout from './DoctorAbout'
+import DoctorFeedback from './DoctorFeedback'
 
 const DoctorDetails = () => {
 
@@ -10,11 +12,11 @@ const DoctorDetails = () => {
 
   /*-----Doctor Details-----*/
     <section>
-      <div className="px-[50px]  mx=auto">
+      <div className="mx=auto">
         <div className="grid md:grid-cols-3 gap-[50px]">
           {/*-----Desc-----*/}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-5 ">
+            <div className="flex items-center gap-5 px-[30px] ">
               <figure className="max-w-[300px] max-h-[500px]">
                 <img src={doctorImg} alt="" className="w-full rounded-[10px]" />
               </figure>
@@ -41,20 +43,29 @@ const DoctorDetails = () => {
               </div>
             </div>
 
-            {/*-----Doctor About-----*/}
-            <div className="mt-[50px] border-b border-solid border-[#2d3436]">
+            
+            <div className="mt-[50px] ml-5 border-b border-solid border-[#2d3436]">
+              {/*-----Doctor About-----*/}
               <button
                 onClick={() => setTab('about')}
                 className={`${tab === "about" && " border-b-2 border-solid border-primaryColor rounded-t-xl  bg-primaryColor  text-white"}
                 py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
                 About
               </button>
+
+              {/*-----Doctor Feedback-----*/}
               <button 
               onClick={() => setTab('feedback')}
                 className={`${tab === "feedback" && "border-b-2 border-solid border-primaryColor rounded-t-xl bg-primaryColor  text-white"}
                 py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
                 Feedback
               </button>
+            </div>
+
+            {/*-----Doctor About & Feedback Details-----*/}
+            <div className="mt-[25px] ml-10">
+              { tab === 'about' && <DoctorAbout /> }
+              { tab === 'feedback' && <DoctorFeedback /> }
             </div>
 
           </div>
