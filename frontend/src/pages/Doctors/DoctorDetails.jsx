@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import doctorImg from '../../assets/images/doctorImg01.jpg'
 import starIcon from '../../assets/images/star.jpg'
 
 const DoctorDetails = () => {
+
+  const [tab, setTab] =useState('about')  
+
   return (
 
   /*-----Doctor Details-----*/
@@ -40,10 +43,16 @@ const DoctorDetails = () => {
 
             {/*-----Doctor About-----*/}
             <div className="mt-[50px] border-b border-solid border-[#2d3436]">
-              <button className={`py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
+              <button
+                onClick={() => setTab('about')}
+                className={`${tab === "about" && " border-b-2 border-solid border-primaryColor  text-primaryColor"}
+                py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
                 About
               </button>
-              <button className={`py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
+              <button 
+              onClick={() => setTab('feedback')}
+                className={`${tab === "feedback" && "border-b-2 border-solid border-primaryColor  text-primaryColor"}
+                py-2 px-5 mr-5 text-[20px] leading-7 text-headingColor font-bold`}>
                 Feedback
               </button>
             </div>
