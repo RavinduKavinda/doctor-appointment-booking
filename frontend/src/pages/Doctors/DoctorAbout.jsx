@@ -1,9 +1,11 @@
 import React from 'react';
+import { formatDate } from '../../utils/formatDate';
 
 const DoctorAbout = () => {
   return (
     <div>
       <div>
+        {/*-----About-----*/}
         <div>
             <h3 className="text-[20px] leading-7 text-headingColor font-bold flex items-center gap-2">
                 About Of
@@ -36,7 +38,7 @@ const DoctorAbout = () => {
                 <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-3 mb-7">
                     <div>
                         <span className="text-irisBlueColor text-[15px] leading-6 font-bold">
-                            21 September 2023
+                            {formatDate('09-21-2023')} - {formatDate('09-21-2023')}
                         </span>
                         <p className="text-[16px] leading-6 font-normal text-textColor">
                             PHD in Cardiologist
@@ -49,12 +51,45 @@ const DoctorAbout = () => {
                 <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-3 mb-7">
                     <div>
                         <span className="text-irisBlueColor text-[15px] leading-6 font-bold">
-                            21 September 2023
+                            {formatDate('09-21-2023')} - {formatDate('09-21-2023')}
                         </span>
                         <p className="text-[16px] leading-6 font-normal text-textColor">
                             PHD in Cardiologist
                         </p>
                     </div>
+                    <p className="text-[14px] leading-5 font-semibold text-textColor">
+                        Silver Crest Hospital, Sri Lanka.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        {/*-----Experience-----*/}
+        <div className="mt-[40px]">
+            <h3 className="text-[20px] leading-7 text-headingColor font-bold flex items-center gap-2">
+                Experience
+            </h3>
+
+            <ul className="grid sm:grid-cols-2 gap-7 pt-4 md:p-5">
+                <li className="p-4 rounded-[10px] bg-yellowColor ">
+                    <span className="text-purpleColor text-[16px] leading-7 font-bold">
+                        {formatDate('09-21-2023')} - {formatDate('09-21-2023')}
+                    </span>
+                    <p className="text-[15px] leading-5 font-normal text-textColor">
+                        Cardiologist
+                    </p>
+                    <p className="text-[14px] leading-5 font-semibold text-textColor">
+                        Silver Crest Hospital, Sri Lanka.
+                    </p>
+                </li>
+
+                <li className="p-4 rounded-[10px] bg-yellowColor ">
+                    <span className="text-purpleColor text-[16px] leading-7 font-bold">
+                        {formatDate('09-21-2023')} - {formatDate('09-21-2023')}
+                    </span>
+                    <p className="text-[15px] leading-5 font-normal text-textColor">
+                        Cardiologist
+                    </p>
                     <p className="text-[14px] leading-5 font-semibold text-textColor">
                         Silver Crest Hospital, Sri Lanka.
                     </p>
