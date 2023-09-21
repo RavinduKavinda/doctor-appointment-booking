@@ -25,7 +25,30 @@ const Login = () => {
               placeholder='Enter Your Email' 
               name='email' 
               value={FormData.email}
-              onChange={handleInputChange} />
+              onChange={handleInputChange}
+              className='w-full p-3 border-b border-solid border-textColor focus:outline-none focus:border-b-primaryColor
+                        text-[17px] leading-6 cursor-pointer rounded-xl'
+              required />
+          </div>
+
+          <div className="mb-5">
+            <input 
+              type="password" 
+              placeholder='Enter Password' 
+              name='password' 
+              value={FormData.password}
+              onChange={handleInputChange}
+              className='w-full p-3 border-b border-solid border-textColor focus:outline-none focus:border-b-primaryColor
+                        text-[17px] leading-6 cursor-pointer rounded-xl'
+              required />
+          </div>
+
+          <div className="mt-6">
+            <button
+              type='submit'
+              className='w-full bg-primaryColor text-white text-[18px] font-bold leading-7 rounded-xl p-3'>
+              Login
+            </button>
           </div>
         </form>
       </div>
