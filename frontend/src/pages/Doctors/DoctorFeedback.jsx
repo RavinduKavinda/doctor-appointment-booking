@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import avator from './../../assets/images/avatarIcon.png'
 import { formatDate } from '../../utils/formatDate'
 import { AiFillStar } from 'react-icons/ai'
+import FeedbackForm from './FeedbackForm'
 
 const DoctorFeedback = () => {
+    const [showFeedback, setshowFeedback] = useState(false)
   return (
     <div>
         <div className="mb-[50px]">
@@ -42,7 +44,15 @@ const DoctorFeedback = () => {
             </div>
         </div>
 
-        
+        {/*-----give feedback-----*/}
+        {!showFeedback && (
+            <div className="text-center">
+                <button className="btn" onClick={() => setshowFeedback(true)}>Give Rate</button>
+            </div>
+        )}
+
+        {showFeedback && <FeedbackForm />}
+
     </div>
   )
 }
