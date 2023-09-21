@@ -14,7 +14,7 @@ const DoctorDetails = () => {
   /*-----Doctor Details-----*/
     <section>
       <div className="mx=auto">
-        <div className="grid md:grid-cols-3 gap-[50px]">
+        <div className="grid md:grid-cols-3 gap-[10px] mx-5">
           {/*-----Desc-----*/}
           <div className="md:col-span-2">
             <div className="flex items-center gap-5 mx-10 ">

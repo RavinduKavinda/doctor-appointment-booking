@@ -47,7 +47,7 @@ const DoctorFeedback = () => {
         {/*-----give feedback-----*/}
         {!showFeedback && (
             <div className="text-center">
-                <button className="btn" onClick={() => setshowFeedback(true)}>Give Your Rate</button>
+                <button className="btn" onClick={() => setshowFeedback(true)}>Give Rate</button>
             </div>
         )}
 
