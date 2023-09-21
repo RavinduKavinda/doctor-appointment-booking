@@ -3,6 +3,33 @@ import avatar from './../assets/images/avatarIcon.png'
 import { Link } from 'react-router-dom'
 
 const Signup = () => {
+
+  const [selectFile, setselectFile] = useState(null)
+  const [previewURL, setpreviewURL] = useState("")
+
+  const [formData, setformData] =useState({
+    name:'',
+    email:'',
+    password:'',
+    photo: selectFile,
+    gender:'',
+    role:'patient'
+  });
+
+  const handleInputChange = e => {
+    setformData({ ... formData, [e.target.name]: e.target.value});
+  };
+
+  const handleFileInputChange = async event => {
+    const file = event.target.files[0]
+      //need to cloud uplod img
+    console.log(file)
+  }
+
+  const submitHandler = async event => {
+    event.preventDefault()
+  }
+
   return (
     <section className="px-5 lg:px-3">
       <div className="w-full max-w-[570px] mx-auto rounded-lg shadow-md md:p-10 bg-slate-100">
@@ -11,14 +38,15 @@ const Signup = () => {
           Create an <span className="text-primaryColor">Account</span>
         </h3>
 
-        <form className="py-4 md:py-1">
+        <form className="py-4 md:py-1" onSubmit={submitHandler}>
 
           <div className="mb-5">
             <input 
               type="text" 
               placeholder='Full Name' 
               name='name' 
-              value=""
+              value={formData.name}
+              onChange={handleInputChange}
               className='w-full p-3 border-b border-solid border-textColor focus:outline-none focus:border-b-primaryColor
                         text-[17px] leading-6 cursor-pointer rounded-xl'
               required />
@@ -28,8 +56,8 @@ const Signup = () => {
             <input 
               type="email" 
               placeholder='Enter Your Email Address' 
-              name='email' 
-              value=""
+              value={formData.email}
+              onChange={handleInputChange}
               className='w-full p-3 border-b border-solid border-textColor focus:outline-none focus:border-b-primaryColor
                         text-[17px] leading-6 cursor-pointer rounded-xl'
               required />
@@ -40,7 +68,8 @@ const Signup = () => {
               type="password" 
               placeholder='Enter Password' 
               name='password' 
-              value=""
+              value={formData.password}
+              onChange={handleInputChange}
               className='w-full p-3 border-b border-solid border-textColor focus:outline-none focus:border-b-primaryColor
                         text-[17px] leading-6 cursor-pointer rounded-xl'
               required />
@@ -50,7 +79,10 @@ const Signup = () => {
           <div className="mb-5 flex items-center justify-between">
             <label className="text-headingColor font-bold text-[17px] leading-8">
               Are you a: 
-              <select name='role'
+              <select 
+                name='role' 
+                value={formData.role}
+                onChange={handleInputChange}
               className='text-textColor font-semibold text-[16px] leading-5 p-3 focus:outline-none'>
                   <option value="patient">Patient</option>
                   <option value="doctor">Doctor</option>
@@ -59,7 +91,10 @@ const Signup = () => {
 
             <label className="text-headingColor font-bold text-[17px] leading-8">
               Gender: 
-              <select name='gender'
+              <select 
+                name='gender'
+                value={formData.gender}
+                onChange={handleInputChange}
               className='text-textColor font-semibold text-[16px] leading-5 p-3 focus:outline-none '>
                   <option value="">Select</option>
                   <option value="male">Male</option>
@@ -80,6 +115,7 @@ const Signup = () => {
                 type="file"
                 name='photo'
                 id='custom__file'
+                onChange={handleFileInputChange}
                 accept='.jpg .png, .JPEG'
                 className=' absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer' 
                 />
