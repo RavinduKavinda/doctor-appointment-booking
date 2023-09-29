@@ -13,6 +13,7 @@ const Contact = () => {
           the best possible way. If you have questions or need assistance, Let us know.
         </p>
 
+        {/*-----Contact-----*/}
         <form action="#" className=' space-y-8'>
           <div>
             <label htmlFor="email" className='from_label'>
@@ -22,9 +23,32 @@ const Contact = () => {
               type="email"
               id='email'
               placeholder='example@mail.com'
-              className='form_label mt-1' />
-              
+              className='form_input mt-1' />
           </div>
+
+          <div>
+            <label htmlFor="subject" className='from_label'>
+              Subject
+            </label>
+            <input 
+              type="text"
+              id='subject'
+              placeholder='subject'
+              className='form_input mt-1' />
+          </div>
+
+          <div className='sm:col-span-2'>
+            <label htmlFor="message" className='from_label'>
+              Your Message
+            </label>
+            <textarea 
+              rows="5"
+              type="text"
+              id='message'
+              placeholder='Leave your message. . . .'
+              className='form_input mt-1' />
+          </div>
+
         </form>
       </div>
     </section>
