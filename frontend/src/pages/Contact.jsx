@@ -14,7 +14,7 @@ const Contact = () => {
         </p>
 
         {/*-----Contact-----*/}
-        <form action="#" className=' space-y-8'>
+        <form action="#" className=' space-y-5'>
           <div>
             <label htmlFor="email" className='from_label'>
               Your Email
@@ -48,6 +48,10 @@ const Contact = () => {
               placeholder='Leave your message. . . .'
               className='form_input mt-1' />
           </div>
+
+          <button className="btn sm:w-fit" type='submit'>
+            Submit
+          </button>
 
         </form>
       </div>
