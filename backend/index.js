@@ -13,10 +13,18 @@ const corsOptions = {
     origin:true
 }
 
+//Route
 app.get('/',(req,res) => {
     res.send('Api is working')
-})
+});
 
+//Middleware 
+app.use(express.json())
+app.use(cookieParser())
+app.use(cors(corsOptions))
+
+
+//Server Stat
 app.listen(port, () => {
-    console.log("Server is running on port" + port);
+    console.log("Server is running on port " + port);
 })
