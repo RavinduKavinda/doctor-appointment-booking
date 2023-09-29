@@ -27,6 +27,13 @@
     .description{
         @apply bg-blue-100 bg-no-repeat bg-cover bg-center w-full ;
     }
+    .form_label {
+        @apply text-textColor text-[17px] leading-7 mb-2
+    }
+    .form_input {
+        @apply w-full p-3 border border-solid border-gray-600 focus:outline-none focus:border-primaryColor
+                text-[17px] leading-7 text-headingColor placeholder:text-gray-400  cursor-pointer rounded-xl
+    }
 }
 
 @media only screen and (max-width: 1024px) {
