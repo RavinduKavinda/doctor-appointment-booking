@@ -1,4 +1,4 @@
-import UserSchema from "../models/UserSchema.js";
+import User from "../models/UserSchema.js";
 
 //User update
 export const updateUser = async (req, res) => {
