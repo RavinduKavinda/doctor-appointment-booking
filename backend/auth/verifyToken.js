@@ -18,9 +18,30 @@ export const authenticate = async (req, res, next) => {
     }
 
     try {
-        console.log(authToken);
+        const token = authToken.split(" ")[1];
+
+        //verify token
+        const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+
+        req.userID = decoded.id;
+        req.role = decoded.role;
+
         next();
+
     } catch (err) {
-        
+        if(err.name === "TokenExpiredError"){
+            return res
+                .status(401)
+                .json({
+                    message: "Token is expired."
+                });
+        }
+
+        return res
+            .status(401)
+            .json({
+                success: false,
+                message: "Invalid Token"
+            });
     }
 }
