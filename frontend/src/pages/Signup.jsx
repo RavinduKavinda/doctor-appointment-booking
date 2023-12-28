@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import avatar from './../assets/images/avatarIcon.png'
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import avatar from './../assets/images/avatarIcon.png';
+import { Link } from 'react-router-dom';
+import uploadImage from '../utils/uploadCloudinary';
 
 const Signup = () => {
 
@@ -21,14 +22,19 @@ const Signup = () => {
   };
 
   const handleFileInputChange = async event => {
-    const file = event.target.files[0]
-      //need to cloud uplod img
-    console.log(file)
-  }
+    const file = event.target.files[0];
+    
+    //need to cloud upload img
+    const data = await uploadImage(file);
+    
+    setpreviewURL(data.url);
+    setselectFile(data.url);
+    setformData({... formData, photo: data.url});
+
+  };
 
   const submitHandler = async event => {
 
-    console.log(formData);
     event.preventDefault()
   }
 
