@@ -27,6 +27,8 @@ const Signup = () => {
   }
 
   const submitHandler = async event => {
+
+    console.log(formData);
     event.preventDefault()
   }
 
@@ -56,6 +58,7 @@ const Signup = () => {
             <input 
               type="email" 
               placeholder='Enter Your Email Address' 
+              name='email' 
               value={formData.email}
               onChange={handleInputChange}
               className='w-full p-3 border-b border-solid border-textColor focus:outline-none focus:border-b-primaryColor
@@ -71,7 +74,7 @@ const Signup = () => {
               value={formData.password}
               onChange={handleInputChange}
               className='w-full p-3 border-b border-solid border-textColor focus:outline-none focus:border-b-primaryColor
-                        text-[17px] leading-6 cursor-pointer rounded-xl'
+                        text-[17px] leading-6 cursor-pointer rounded-xl tracking-widest'
               required />
           </div>
 
