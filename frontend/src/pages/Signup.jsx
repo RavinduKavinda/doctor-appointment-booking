@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import avatar from './../assets/images/avatarIcon.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import uploadImage from '../utils/uploadCloudinary';
 import {BASE_URL} from '../config';
 import {toast} from 'react-toastify'
@@ -9,7 +9,7 @@ const Signup = () => {
 
   const [selectFile, setselectFile] = useState(null)
   const [previewURL, setpreviewURL] = useState("")
-  const [loading, setloading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formData, setformData] =useState({
     name:'',
     email:'',
@@ -18,6 +18,8 @@ const Signup = () => {
     gender:'',
     role:'patient'
   });
+
+  const navigate = useNavigate()
 
   const handleInputChange = e => {
     setformData({ ... formData, [e.target.name]: e.target.value});
@@ -38,7 +40,7 @@ const Signup = () => {
   const submitHandler = async event => {
 
     event.preventDefault();
-    setloading(true)
+    setLoading(true)
 
     try {
       const res = await fetch (`${BASE_URL}/auth/register`,
@@ -56,10 +58,13 @@ const Signup = () => {
         throw new Error(message)
       }
 
-      setloading(false)
+      setLoading(false)
       toast.success(message);
+      navigate('/login')
+
     } catch (err) {
-      
+      toast.error(err.message)
+      setLoading(false)
     }
   }
 
@@ -140,9 +145,12 @@ const Signup = () => {
 
           {/*----Image-----*/}
           <div className="mb-5 flex items-center gap-5">
-            <figure className="w-[50px] h-[50px] rounded-full border-2 border-solid border-primaryColor flex items-center justify-center ">
-              <img src={avatar} alt="" className='w-full rounded-full' />
-            </figure>
+            {selectFile && <figure className="w-[50px] h-[50px] rounded-full border-2 border-solid border-primaryColor flex items-center justify-center ">
+              <img 
+                src={previewURL} 
+                alt="" 
+                className='w-full rounded-full' />
+            </figure>}
 
             <div className="relative w-[130px] h-[40px]">
               <input 
