@@ -3,7 +3,8 @@ import avatar from './../assets/images/avatarIcon.png';
 import { Link, useNavigate } from 'react-router-dom';
 import uploadImage from '../utils/uploadCloudinary';
 import {BASE_URL} from '../config';
-import {toast} from 'react-toastify'
+import {toast} from 'react-toastify';
+import HashLoader from 'react-spinners/HashLoader';
 
 const Signup = () => {
 
@@ -171,9 +172,14 @@ const Signup = () => {
 
           <div className="mt-6">
             <button
-              type='submit'
-              className='w-full bg-primaryColor text-white text-[17px] font-bold leading-7 rounded-xl p-3'>
-              Sign Up
+              disabled = {loading && true}
+              type ='submit'
+              className ='w-full bg-primaryColor text-white text-[17px] font-bold leading-7 rounded-xl p-3'>
+              { loading ? (
+                <HashLoader size = {35} color = '#fffff'/>
+                  ) : (
+                  'Sign Up'
+                  )}
             </button>
           </div>
         </form>
