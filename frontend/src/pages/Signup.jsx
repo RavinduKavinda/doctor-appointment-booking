@@ -2,12 +2,14 @@ import { useState } from 'react';
 import avatar from './../assets/images/avatarIcon.png';
 import { Link } from 'react-router-dom';
 import uploadImage from '../utils/uploadCloudinary';
+import {BASE_URL} from '../config';
+import {toast} from 'react-toastify'
 
 const Signup = () => {
 
   const [selectFile, setselectFile] = useState(null)
   const [previewURL, setpreviewURL] = useState("")
-
+  const [loading, setloading] = useState(false);
   const [formData, setformData] =useState({
     name:'',
     email:'',
@@ -35,7 +37,30 @@ const Signup = () => {
 
   const submitHandler = async event => {
 
-    event.preventDefault()
+    event.preventDefault();
+    setloading(true)
+
+    try {
+      const res = await fetch (`${BASE_URL}/auth/register`,
+      {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const {message} = await res.json()
+
+      if(!res.ok){
+        throw new Error(message)
+      }
+
+      setloading(false)
+      toast.success(message);
+    } catch (err) {
+      
+    }
   }
 
   return (
