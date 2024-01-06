@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import avatar from './../assets/images/avatarIcon.png';
 import { Link, useNavigate } from 'react-router-dom';
 import uploadImage from '../utils/uploadCloudinary';
 import {BASE_URL} from '../config';
