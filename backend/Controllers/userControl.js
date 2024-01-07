@@ -1,4 +1,6 @@
 import User from "../models/UserSchema.js";
+import Booking from "../models/bookingSchema.js";
+import Doctor from "../models/DoctorSchema.js";
 
 //User update
 export const updateUser = async (req, res) => {
@@ -131,3 +133,30 @@ export const getUserProfile = async (req, res) => {
             .json({ success: false, message: "Something went wrong!"})
     }
 };
+
+export const getAppointments = async(req, res) => {
+    try {
+
+        // get appointment from user
+        const bookings = await Booking.find({user: req.userId})
+
+        // extract doc ids
+        const doctorIds = bookings.map(el=el.doctor.id)
+
+        // get doc using doc ids
+        const doctors = await Doctor.find({_id: {$in:doctorIds}}).select('-password')
+
+        res
+            .status(200)
+            .json({
+                success: true,
+                message: "Appointment are getting",
+                data: doctors,
+            });
+
+    } catch (err) {
+        res
+        .status(500)
+        .json({ success: false, message: "Something went wrong!"});
+    }
+}
