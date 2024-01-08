@@ -7,6 +7,7 @@ import Doctors from "../pages/Doctors/Doctors";
 import DoctorDetails from "../pages/Doctors/DoctorDetails";
 import MyAccount from "../Dashboard/user-account/MyAccount";
 import Dashboard from "../Dashboard/doctor-account/Dashboard";
+import ProtectRoute from "./ProtectRoute";
 
 import {Routes, Route} from "react-router-dom";
 
@@ -22,8 +23,10 @@ const Routers = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/doctors/:id" element={<DoctorDetails />} />
-      <Route path="users/profile/me" element={<MyAccount />} />
-      <Route path="doctors/profile/me" element={<Dashboard />} />
+
+      <Route path="users/profile/me" element={<ProtectRoute allowedroles={['patient']}> <MyAccount /> </ProtectRoute>} />
+      <Route path="doctors/profile/me" element={<ProtectRoute allowedroles={['doctor']}> <Dashboard /> </ProtectRoute>} />
+      
     </Routes>
   );
 };
