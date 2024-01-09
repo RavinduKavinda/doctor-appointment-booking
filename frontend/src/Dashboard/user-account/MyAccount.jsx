@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react'
 import userImg from '../../assets/images/UserImg.jpg';
 import { authContext } from './../../context/AuthContext';
+import MyBookings from './MyBookings';
+import ProfileSettings from './ProfileSettings';
 
 const MyAccount = () => {
 
@@ -59,18 +61,24 @@ const MyAccount = () => {
 
         {/* User All Details */}
         <div className="md:col-span-2 md:px-[30px]">
-          <button
-            onClick={() => setTab("bookings")} 
-            className={`${tab==='bookings' && 'bg-primaryColor text-white'} p-2 mr-5 rounded-lg text-headingColor font-bold text-[17px] leading-7 border-2 border-solid border-primaryColor`}>
-              My Bookings
-          </button>
+          <div>
+              <button
+                onClick={() => setTab("bookings")} 
+                className={`${tab==='bookings' && 'bg-primaryColor text-white'} p-2 mr-5 rounded-lg text-headingColor font-bold text-[17px] leading-7 border-2 border-solid border-primaryColor`}>
+                  My Bookings
+              </button>
 
-          <button 
-            onClick={() => setTab("settings")} 
-            className={`${tab==='settings' && 'bg-primaryColor text-white'} py-2 px-5 rounded-lg text-headingColor font-bold text-[17px] leading-7 border-2 border-solid border-primaryColor`}>
-              Profile Settings
-          </button>
-        </div>
+              <button 
+                onClick={() => setTab("settings")} 
+                className={`${tab==='settings' && 'bg-primaryColor text-white'} py-2 px-5 rounded-lg text-headingColor font-bold text-[17px] leading-7 border-2 border-solid border-primaryColor`}>
+                  Profile Settings
+              </button>
+            </div>
+
+            {tab === "bookings" && <MyBookings />}
+            {tab === "settings" && <ProfileSettings />}
+
+          </div>
       </div>
     </div>
   )
